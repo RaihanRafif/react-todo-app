@@ -6,7 +6,7 @@ function App() {
     {
       id: 1,
       title: "Finish Progate React Course",
-      completed: false,
+      completed: false, // Menganti nilai awal ke true
     },
     {
       id: 2,
@@ -20,14 +20,22 @@ function App() {
     },
   ]);
 
-  console.log(todos);
+  const toggleCompleted = (todoId) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === todoId) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+  };
 
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Todo List</h1>
-      <Todos todos={todos} />
+      <Todos todos={todos} toggleCompleted={toggleCompleted} />
     </div>
-  )
+  );
 }
 
 const styles = {
