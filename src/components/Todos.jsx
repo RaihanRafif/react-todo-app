@@ -3,18 +3,11 @@
 import TodoItem from "./TodoItem";
 
 // eslint-disable-next-line react/prop-types
-const Todos = ({ todos, toggleCompleted, toggleDelete }) => {
+const Todos = ({ todos }) => {
   return (
     <div style={styles.container}>
       {todos.map((todo) => {
-        return (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            toggleCompleted={toggleCompleted}
-            toggleDelete={toggleDelete}
-          />
-        );
+        return <TodoItem key={todo.id} todo={todo} />;
       })}
     </div>
   );
