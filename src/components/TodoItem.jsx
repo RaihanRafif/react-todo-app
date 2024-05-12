@@ -1,5 +1,11 @@
+import { useContext } from "react";
+import { TodoContext } from '../App'
+
+
 /* eslint-disable react/prop-types */
-const TodoItem = ({ todo, toggleCompleted, toggleDelete }) => {
+const TodoItem = ({ todo }) => {
+  const { toggleCompleted, toggleDelete } = useContext(TodoContext);
+
   const getTodoTitleStyle = () => {
     if (todo.completed === true) {
       return { textDecoration: "line-through" };
