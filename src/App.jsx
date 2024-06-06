@@ -1,16 +1,16 @@
-import { useState, createContext } from 'react'
+import { useState, createContext } from 'react';
 import Todos from "./components/Todos";
 import TodoForm from "./components/TodoForm";
 
 // Buatlah sebuah context
-export const TodoContext = createContext()
+export const TodoContext = createContext();
 
 function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
       title: "Finish Progate React Course",
-      completed: false, // Menganti nilai awal ke true
+      completed: true,
     },
     {
       id: 2,
@@ -68,10 +68,17 @@ function App() {
 const styles = {
   container: {
     textAlign: "center",
-    padding: "12px",
+    padding: "20px",
+    fontFamily: "'Courier New', Courier, monospace",
+    backgroundColor: "#f0f0f0",
+    borderRadius: "10px",
+    boxShadow: "0 0 10px rgba(0,0,0,0.1)",
   },
   title: {
-    fontSize: "36px",
+    fontSize: "40px",
+    color: "#333",
+    marginBottom: "20px",
+    textShadow: "2px 2px #ccc",
   },
 };
 

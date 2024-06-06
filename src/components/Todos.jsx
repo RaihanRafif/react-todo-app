@@ -15,8 +15,12 @@ const Todos = ({ todos }) => {
 
 const styles = {
   container: {
-    width: "40%",
+    width: "80%",
     margin: "0 auto",
+    padding: "20px",
+    backgroundColor: "#fff",
+    borderRadius: "8px",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
   },
 };
 
